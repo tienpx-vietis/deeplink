@@ -1,160 +1,311 @@
-<style>
-@import "compass/css3";
-@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+<html>
 
-html, body {
-  background-color: #e7e7ea;
-  font-family: "Inconsolata", monospace;
-  font-size: 1.13em;
-  font-weight: bold;
-}
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="click_page_type" content="cpit">
+    <meta name="enable_copy_unique_match" content="0">
+    <title>Open in app?</title>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:image" content="https://s3-ap-northeast-1.amazonaws.com/baluko-public/images/index/mv/logo.png">
+    <meta name="twitter:image" content="https://s3-ap-northeast-1.amazonaws.com/baluko-public/images/index/mv/logo.png">
+    <meta property="og:url" content="https://github.com/">
+    <style nonce="">
+        .IpzX7e-DARUcf-LgbsSe {
+            background-color: rgba(255, 255, 255, .87);
+            border: 1px solid #f2f2f2;
+            -webkit-border-radius: 2px;
+            border-radius: 2px;
+            -webkit-box-shadow: 0 2px 2px #999;
+            box-shadow: 0 2px 2px #999;
+            color: #039be5;
+            cursor: pointer;
+            display: inline-block;
+            font-family: -apple-system, "Roboto-Medium", Helvetica, sans-serif;
+            letter-spacing: .4px;
+            line-height: 14px;
+            padding: 17px 20px;
+            text-decoration: none;
+            vertical-align: middle;
+            margin-bottom: 16px
+        }
 
-@mixin transition-all {
-  -webkit-transition: all 200ms ease-in-out;
-  -moz-transition: all 200ms ease-in-out;
-  -o-transition: all 200ms ease-in-out;
-	transition: all 200ms ease-in-out;
-}
+        .IpzX7e-DARUcf-LgbsSe.v3pZbf-LgbsSe {
+            background-color: rgba(3, 155, 229, .87);
+            color: #fff
+        }
 
-$slate-color: rgb(16,24,50);
-$blue-color: #00bcdd;
-$pink-color: #ff00ff;
+        .IpzX7e-DARUcf-haAclf {
+            -webkit-align-items: center;
+            align-items: center;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: flex;
+            height: 95vh;
+            -webkit-justify-content: center;
+            justify-content: center;
+            margin: 0 auto
+        }
 
-.container {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  height: 100vh;
-}
+        .IpzX7e-DARUcf-bN97Pc {
+            color: #000;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: flex;
+            font-family: -apple-system, "Roboto-Regular", Helvetica, sans-serif;
+            font-size: 14px;
+            line-height: 1.5em;
+            text-align: center;
+            width: 100%
+        }
 
-.btn {
-  color: $slate-color;
-  cursor: pointer;
-  display: inline-block;
-  letter-spacing: 0.075em;
-  padding: .8em 1em;
-  margin: auto 2em;
-  position: relative;
-  align-self: center;
-  text-transform: uppercase;
-  border: 3px $blue-color solid;
-  border-image: linear-gradient(45deg, $blue-color 0%, $pink-color 100%);
-  border-image-slice: 1 1 0 0;
-  z-index: 1;
-  box-shadow: -0.5em .5em transparentize($slate-color,1);
-  transform-origin: left bottom;
-  @include transition-all;
-  
-  &:before,
-  &:after {
-    border: 3px $blue-color solid;
-    content: '';
-    display: block;
-    position: absolute;
-    z-index: -1;
-  }
-  
-  // SIDE
-  &:before {
-    border-image: linear-gradient(45deg, $blue-color 0%, adjust-hue($blue-color,10%) 100%);
-    border-image-slice: 1 1 0 1;
-    left: -0.59em; top: .15em;
-    width: .31em;
-    height: 100%;
-    transform: skewY(-45deg);
-  }
-  
-  // BOTTOM
-  &:after {
-    border-image: linear-gradient(45deg, $blue-color 0%, $pink-color 100%);
-    border-image-slice: 1 1 1 0;
-    bottom: -0.61em; right: 0.16em;
-    width: 100%;
-    height: .31em;
-    transform: skewX(-45deg);
-  }
-  
-  // Shadow
-  &:hover {
-    //border-image-slice: 1;
-    background-color: white;
-    background-size: 90%;
-    transform: translate(0.5em,-0.5em);
-    box-shadow: -1em 1em .15em transparentize($slate-color,.9);
-    // box-shadow: -1em 1em 1em transparentize($blue-color,.9), -1em 1.9em 1.9em transparentize($slate-color,.9), 0em .38em .38em transparentize($slate-color,.9), 0em .76em .76em transparentize($slate-color,.9), 0em 1.52em 1.52em transparentize($slate-color,.9);
-    
-    
-    &:before {
-      @include background-image(linear-gradient(45deg, $blue-color 0%, adjust-hue($blue-color,10%) 100%));
-      height: calc(100% - .13em);
-      border-image-slice: 1;
-    }
-    
-    &:after {
-      @include background-image(linear-gradient(45deg, $blue-color 0%, $pink-color 100%));
-      width: calc(100% - .13em);
-      border-image-slice: 1;
-    }
-  }
-}
+        .IpzX7e-DARUcf-bN97Pc-SmKAyb {
+            display: block;
+            margin: 0 0 34px
+        }
 
-.cta {
-  background-color: $blue-color; // Old browsers
-  @include background-image(linear-gradient(45deg, $blue-color 0%, $pink-color 100%));
-  border-image: linear-gradient(45deg, lighten($blue-color,20%) 0%, lighten($pink-color,20%) 100%);
-  border-image-slice: 1;
-  color: white;
-  
-  &:before {
-    border-image-slice: 1;
-    @include background-image(linear-gradient(45deg, $blue-color 0%, adjust-hue($blue-color,10%) 100%));
-    left: -0.75em;
-    top: .15em;
-  }
-  
-  &:after {
-    border-image-slice: 1;
-    @include background-image(linear-gradient(45deg, $blue-color 0%, $pink-color 100%));
-    bottom: -0.75em;
-    right: .15em;
-  }
-  
-  &:hover {
-    background: white;
-    border-image: linear-gradient(45deg, $blue-color 0%, $pink-color 100%);
-    border-image-slice: 1;
-    color: $slate-color;
-    
-    &:before {
-      height: 100%;
-    }
-    &:after {
-      width: 100%;
-    }
-  }
-}
+        .IpzX7e-DARUcf-bN97Pc-SmKAyb.SfQLQb-HiaYvf {
+            text-align: left
+        }
 
-.bg {
-  background: none;
-  border: 3px solid $slate-color;
-  color: $slate-color;
-  
-  &:before,
-  &:after {
-    background: $slate-color;
-    border: 3px solid $slate-color;
-  }
-  
-  &:hover {
-    border-image: none;
-    
-    &:before,
-    &:after {
-      background: $slate-color;
-    }
-  }
-}
-</style>
-<div class="container">
-  <a class="btn cta bg" href="https://balukoapp.page.link/?apn=jp.baluko.app&isi=1619758573&ibi=jp.baluko.app&efr=1&link=https://balukoapp.page.link/payment?order_id=123123">Baluko</a>
-</div>
+        .IpzX7e-DARUcf-ij8cu {
+            -webkit-box-orient: vertical;
+            display: -webkit-box;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            word-wrap: break-word
+        }
+
+        .IpzX7e-DARUcf-ij8cu.x988Cb {
+            -webkit-line-clamp: 2;
+            max-height: 3em;
+            opacity: .5
+        }
+
+        .IpzX7e-DARUcf-ij8cu.ZZovkc {
+            -webkit-line-clamp: 1;
+            font-family: -apple-system, "Roboto-Medium", Helvetica, sans-serif;
+            margin: 0 0 14px;
+            max-height: 1.5em
+        }
+
+        .IpzX7e-DARUcf-Bz112c {
+            -webkit-border-radius: 22.37%;
+            border-radius: 22.37%;
+            height: 36px;
+            margin: 0 10px 0 0;
+            vertical-align: middle;
+            width: 36px
+        }
+
+        .IpzX7e-DARUcf-HiaYvf {
+            display: block;
+            margin: auto;
+            object-fit: contain
+        }
+
+        .IpzX7e-DARUcf-HiaYvf-haAclf {
+            background-color: #fff;
+            display: block;
+            margin: 0 0 14px
+        }
+
+        .IpzX7e-DARUcf-r4nke {
+            display: block;
+            font-size: 20px;
+            margin: 0 0 24px;
+            text-align: center
+        }
+
+        .Zp0mH-haAclf {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-justify-content: center;
+            justify-content: center;
+            margin-bottom: 16px;
+            border: 1px solid #f0f0f0
+        }
+
+        .Zp0mH {
+            -webkit-box-flex: 0 0 24px;
+            -webkit-flex: 0 0 24px;
+            flex: 0 0 24px
+        }
+
+        .Zp0mH-V67aGc {
+            opacity: .5;
+            -webkit-box-flex: 0 1 auto;
+            -webkit-flex: 0 1 auto;
+            flex: 0 1 auto;
+            text-align: left;
+            font-size: 12px
+        }
+
+        @media only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:portrait),
+        only screen and (min-device-width:1024px) and (max-device-width:1366px) and (orientation:portrait),
+        only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:landscape),
+        only screen and (min-device-width:1024px) and (max-device-width:1366px) and (orientation:landscape) {
+            .IpzX7e-DARUcf-haAclf {
+                width: -webkit-calc(100vw - 76px);
+                width: calc(100vw - 76px)
+            }
+
+            .IpzX7e-DARUcf-bN97Pc {
+                -webkit-flex-direction: column;
+                flex-direction: column
+            }
+
+            .IpzX7e-DARUcf-HiaYvf {
+                height: 360px;
+                width: 100%;
+                object-fit: contain
+            }
+        }
+
+        @media only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:landscape),
+        only screen and (min-device-width:1024px) and (max-device-width:1366px) and (orientation:landscape) {
+            .IpzX7e-DARUcf-haAclf {
+                width: -webkit-calc(100vw - 332px);
+                width: calc(100vw - 332px)
+            }
+        }
+
+        @media only screen and (min-device-width:320px) and (device-aspect-ratio:2/3) and (orientation:portrait),
+        only screen and (min-device-width:320px) and (device-aspect-ratio:40/71) and (orientation:portrait),
+        only screen and (min-device-width:375px) and (max-device-width:667px) and (orientation:portrait),
+        only screen and (min-device-width:414px) and (max-device-width:736px) and (orientation:portrait) {
+            .IpzX7e-DARUcf-haAclf {
+                width: -webkit-calc(100vw - 28px);
+                width: calc(100vw - 28px)
+            }
+
+            .IpzX7e-DARUcf-bN97Pc {
+                -webkit-flex-direction: column;
+                flex-direction: column
+            }
+
+            .IpzX7e-DARUcf-HiaYvf {
+                height: 180px;
+                width: 100%;
+                object-fit: contain
+            }
+        }
+
+        @media only screen and (min-device-width:320px) and (device-aspect-ratio:2/3) and (orientation:landscape),
+        only screen and (min-device-width:320px) and (device-aspect-ratio:40/71) and (orientation:landscape),
+        only screen and (min-device-width:375px) and (max-device-width:667px) and (orientation:landscape),
+        only screen and (min-device-width:414px) and (max-device-width:736px) and (orientation:landscape) {
+            .IpzX7e-DARUcf-haAclf {
+                width: -webkit-calc(100vw - 76px);
+                width: calc(100vw - 76px)
+            }
+
+            .IpzX7e-DARUcf-bN97Pc-SmKAyb.SfQLQb-HiaYvf {
+                width: -webkit-calc(100vh - 28px);
+                width: calc(100vh - 28px)
+            }
+
+            .IpzX7e-DARUcf-bN97Pc {
+                -webkit-flex-direction: column;
+                flex-direction: column
+            }
+
+            .IpzX7e-DARUcf-HiaYvf {
+                height: 180px;
+                width: -webkit-calc(100vh - 28px);
+                width: calc(100vh - 28px);
+                object-fit: contain
+            }
+
+            .IpzX7e-DARUcf-LgbsSe-haAclf {
+                -webkit-align-items: center;
+                align-items: center;
+                display: block
+            }
+        }
+
+        @media only screen and (min-device-width:414px) and (max-device-width:736px) and (orientation:landscape) {
+            .IpzX7e-DARUcf-bN97Pc-SmKAyb.SfQLQb-HiaYvf {
+                margin: 0 137px
+            }
+        }
+
+        @media only screen and (min-device-width:375px) and (max-device-width:667px) and (orientation:landscape) {
+            .IpzX7e-DARUcf-bN97Pc-SmKAyb.SfQLQb-HiaYvf {
+                margin: 0 122px
+            }
+        }
+
+        @media only screen and (min-device-width:320px) and (device-aspect-ratio:40/71) and (orientation:landscape) {
+            .IpzX7e-DARUcf-haAclf {
+                width: -webkit-calc(100vw - 36px);
+                width: calc(100vw - 36px)
+            }
+
+            .IpzX7e-DARUcf-HiaYvf {
+                height: 130px;
+                object-fit: contain
+            }
+
+            .IpzX7e-DARUcf-bN97Pc-SmKAyb.SfQLQb-HiaYvf {
+                margin: 0 100px
+            }
+        }
+
+        @media only screen and (min-device-width:320px) and (device-aspect-ratio:2/3) and (orientation:landscape) {
+            .IpzX7e-DARUcf-haAclf {
+                width: -webkit-calc(100vw - 36px);
+                width: calc(100vw - 36px)
+            }
+
+            .IpzX7e-DARUcf-bN97Pc-SmKAyb.SfQLQb-HiaYvf {
+                width: -webkit-calc(100vh - 96px);
+                width: calc(100vh - 96px)
+            }
+
+            .IpzX7e-DARUcf-HiaYvf {
+                height: 130px;
+                width: -webkit-calc(100vh - 96px);
+                width: calc(100vh - 96px);
+                object-fit: contain
+            }
+
+            .IpzX7e-DARUcf-bN97Pc-SmKAyb.SfQLQb-HiaYvf {
+                margin: 0 50px 0 0
+            }
+        }
+    </style>
+</head>
+
+<body style="background-color:#fff; display: none;">
+    <div class="IpzX7e-DARUcf-haAclf">
+        <div class="IpzX7e-DARUcf-bN97Pc">
+            <div class="IpzX7e-DARUcf-bN97Pc-SmKAyb SfQLQb-HiaYvf"><span class="IpzX7e-DARUcf-r4nke">Back to app to
+                    finish your payment</span>
+                <div class="IpzX7e-DARUcf-HiaYvf-haAclf"><img id="H77mTb"
+                        src="https://s3-ap-northeast-1.amazonaws.com/baluko-public/images/index/mv/logo.png"
+                        class="IpzX7e-DARUcf-HiaYvf" style="object-fit: contain;"></div>
+            </div>
+            <div class="IpzX7e-DARUcf-LgbsSe-haAclf">
+                <div><a id="pzc6ed" class="IpzX7e-DARUcf-LgbsSe"
+                        data-custom-scheme-to-try="jp.baluko.app://google/link?deep_link_id=https%3A%2F%2Fgithub.com%2F&amp;lt=DDL_SHORT&amp;ln=Test&amp;lid=https%3A%2F%2Fpreview.page.link%2Fbaluko.page.link%2Fiz8q%3F_imcp%3D1&amp;utm_campaign=Test&amp;utm_medium=dynamic_link&amp;utm_source=firebase"
+                        href="">OPEN</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript">
+    (function () {
+        setTimeout(() => {
+            document.getElementsByTagName("body")[0].style.display = 'block';
+        }, 5000);
+        var url = window.location.search;
+        url = url.replace("?", '').replace('link=', '');
+        document.getElementById('pzc6ed').href = url;
+        document.getElementById('pzc6ed').click();
+    })();
+</script>
+
+</html>
