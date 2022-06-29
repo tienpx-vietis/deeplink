@@ -304,7 +304,9 @@
         var url = window.location.search;
         url = url.replace("?", '').replace('link=', '');
         document.getElementById('pzc6ed').href = url;
-        document.getElementById('pzc6ed').click();
+        setTimeout(() => {
+            document.getElementById('pzc6ed').click();
+        }, 5000);
     })();
 </script>
 
